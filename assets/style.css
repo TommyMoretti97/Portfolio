@@ -1,0 +1,631 @@
+@import url('https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&display=swap');
+
+/*Globali*/
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #000918;
+    color: white;
+    background-size: cover;
+}
+a {
+    color: inherit; 
+    text-decoration: none; 
+}
+/*Header di tutte*/
+.header-menu{
+    display:flex;
+    width: 25%;
+    height: 8vh;
+    margin: 0 auto;
+    justify-content: space-around;
+    padding-left: 4%;
+
+}
+#header{
+    display: flex;
+}
+.menu{
+    padding: 10px;
+    font-size: 24px;
+    align-self: center;
+}
+.menu:hover{
+    background-color: white;
+    color: #000918;
+    cursor: pointer;
+    box-shadow: 1px 0px 10px 3px white;
+}
+
+/*Homepage*/
+.container-home{
+    width: 100%;
+   height: 100%;
+  overflow-x: hidden;
+    display: flex;
+    position: relative;    
+}
+.scroll-content {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column; 
+    flex-wrap: nowrap; 
+    white-space: nowrap;
+    animation: scroll 8s linear  infinite;
+}
+
+#scroll-content2{
+    animation-delay: 4s;
+}
+
+.mask-container{
+    width: 50%;
+    height: 92vh;
+    background-color: rgb(1, 3, 17);
+    border-top-right-radius: 50%;
+   border-top-left-radius: 50%;
+   text-align: center;
+   margin: 0 auto;
+   z-index: 2;
+   animation: slideDown 2s ease forwards;
+   position: relative;
+}
+/*Animazione Maschera Homepage*/
+
+@keyframes slideDown {
+    0% {
+      top: -300px; /* Inizio sopra lo schermo */
+      opacity: 0.6;
+    }
+    100% {
+      top: 0px; 
+      opacity: 1;
+    }
+  }
+
+#nome{
+    margin-top: 6%;
+    font-size: 42px;
+    background: linear-gradient(to right,  rgb(0, 54, 20),rgb(253, 249, 249)); 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    background-clip: text; 
+    color: transparent;   
+    text-align: center;      
+}
+
+.mask-container img{
+    border-radius:50%;
+    margin-top: 2%;
+    box-shadow: 1px 0px 6px 2px white;
+}
+
+.front-end{
+    margin-top: 4%;
+    font-family: "Jacques Francois Shadow", serif;
+  font-weight: 400;
+  color: white;
+}
+
+.description{
+    padding: 20px 60px;
+    font-size: 24px;
+    margin-bottom: 4%;
+}
+
+.btn-cv{
+    border: 1px solid white;
+    font-size: 24px;
+    padding: 10px 20px;
+    border-radius: 30px;
+}
+
+.btn-cv:hover{
+    cursor: pointer;
+    background-color: white;
+    color: #000918;
+    box-shadow: 1px 0px 10px 3px white;
+}
+.icon-container{
+    padding: 15px;
+    width: 5%;
+    font-size: 20px;
+    text-align: center;
+    flex-shrink: 0;
+    margin-bottom: 1%;
+}
+
+/*Icona per cambiare colore pagina*/
+.darkmode-lightmode{
+    position: relative;
+    right: 50px;
+    top: 10px ;
+    border: 1px solid white;
+    height: fit-content;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: rgb(1, 3, 17);
+}
+.fa-moon, .fa-sun{
+    font-size: 40px;
+    color: white !important;
+}
+.darkmode-lightmode:hover{
+    box-shadow: 1px 0px 10px 3px white;
+    transform: scale(1.1);
+}
+
+/*LightMode pagina home*/
+body.light-mode {
+    background-color: #ffffff; 
+    color: #000;
+  }
+  body.light-mode .mask-container{
+    background-color: #71bef8;
+  }
+  body.light-mode #nome{
+    background: linear-gradient(to right,  rgb(2, 180, 2),rgb(230, 1, 1)); 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    background-clip: text; 
+    color: transparent;   
+    text-align: center;      
+  }
+  body.light-mode .front-end{
+    color: black 
+  } body.light-mode .menu:hover{
+    background-color: #71bef8;
+    color: white;
+    cursor: pointer;
+    box-shadow: 1px 0px 10px 3px #71bef8;
+  }
+  body.light-mode .darkmode-lightmode{
+    background-color: #71bef8;
+  }
+  body.light-mode .btn-cv{
+    border: 1px solid black;
+  }
+/* Posizionamento icone homepage*/
+.bootstrap{
+    margin-left: 8%;
+}
+.css{
+    margin-left: -3%;
+}
+.html{
+    margin-top: 4%;
+    margin-left: 6%;
+}
+.react{
+    margin-left: -7%;
+}
+.javaScript{
+    margin-left: 10%;
+}
+
+/*Classe per nascondere-rendere visibile icone*/
+.hidden {
+    opacity: 0;
+   
+  }
+  
+  .visible {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+  }
+
+/*Animazione icone*/
+
+@keyframes scroll {
+    0% {
+        transform: translateX(100%) ;
+    }
+    35% {
+        transform: translateX(65%) ;
+    }
+    
+    55% {
+        transform:translateX(20%) ;
+    } 
+    100% {
+        transform:translateX(-18%) ;
+    }
+}
+/*Progetti*/
+.container-progetti {
+    display: flex; 
+    width: 80%;
+    flex-wrap: wrap; 
+    text-align: center;
+    margin: 50px auto;
+    justify-content: space-evenly;
+}
+.container-progetto{
+    width: 50%; 
+    text-align: center;
+    margin: 50px 0px;
+    position: relative;
+}
+.container-progetto h3{
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+.container-progetto-hover h4{
+    font-size: 20px;
+}
+.container-progetto-hover{
+    position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color:  rgb(1, 3, 17);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transform: scale(0);
+  transform-origin: center;
+  transition: opacity 1s ease, transform 1s ease;
+  text-align: center;
+  border-radius: 1%;
+} 
+.container-progetto-hover h4{
+    margin-bottom: 2%;
+    padding: 0px 40px;
+}
+  .container-progetto:hover .container-progetto-hover {
+    opacity: 1;
+    transform: scale(1);
+  }
+  .container-progetto img{
+    width: 70%;
+  }
+  .linkedin-post{
+    position: absolute;
+    top: -50px;
+    z-index: 100;
+    display: none;
+    overflow: hidden;
+  }
+  .fa-x{
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    font-size: 20px;
+    color: black;
+    cursor: pointer;
+    padding: 5px;
+  }
+  .fa-x:hover{
+    background-color: black;
+    color: red;
+  }
+
+/*Lightmode Progetti*/
+body.light-mode .container-progetto-hover{
+    background-color: #71bef8;
+    color: black;
+}
+/*Contatti*/
+#contatti, #progetti{
+    text-align: center;
+    font-size: 50px;
+    margin-top: 5%;
+   
+}
+.container-contatti{
+    position: relative;
+   height: 90vh;
+    overflow: hidden;  
+}
+
+.container-contattami{
+    background-color: rgb(1, 3, 17);
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+    border-radius: 20%;
+    padding-bottom: 1%;
+    animation: cascata 4s  ease-out forwards;
+}
+@keyframes cascata {
+    0% {
+      transform: translateY(-500px); 
+    }
+    25% {
+      transform: translateY(120px); 
+    }
+    30% {
+      transform: translateY(110px) rotate(2deg);
+    }
+    40%{
+        transform: translateY(120px) rotate(-2deg);
+    }
+    50% {
+      transform: translateY(120px) rotate(2deg); 
+    }
+    60%{
+        transform: translateY(100px) rotate(0deg); 
+    }
+    100% {
+      transform: translateY(0) rotate(0deg); 
+    }
+  }
+.fa-github, .fa-linkedin,.fa-facebook,.fa-chrome{
+    font-size: 45px;
+  align-items: center;
+  margin: 30px;
+  
+  
+}
+.fa-github:hover{
+    transform: scale(1.6);
+    color: black;
+    background-color: white;
+    padding: 6px;
+    border-radius: 50%;
+    font-size: 30px;
+}
+.fa-linkedin:hover{
+    transform: scale(1.6);
+    color: #0a66c2;
+    background-color: white;
+    padding: 6px;
+    border-radius: 50%;
+    font-size: 30px;
+} 
+.fa-facebook:hover{
+    transform: scale(1.6);
+    color: #0866ff;
+    background-color: white;
+    padding: 6px;
+    border-radius: 50%;
+    font-size: 30px;
+}
+.fa-chrome:hover{
+    transform: scale(1.6);
+    color: black;
+    background-color: white;
+    padding: 6px;
+    border-radius: 50%;
+    font-size: 30px;
+}
+.icone-contatti{
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    margin: 3% auto;
+}
+#descrizione-contatti{
+  padding: 2% 7%;
+    font-size: 20px;
+    text-align: center;
+}
+.image{
+    position: absolute;
+    width: 60px;
+    max-width: 60px;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+.btn-cv-container-contatti{
+    margin: 20px auto; 
+    text-align: center;
+}
+/*Lightmode Contatti*/
+body.light-mode .container-contattami{
+    background-color: #71bef8;
+}
+
+/*Media Query*/
+/*Versione Pc */
+
+@media screen and (min-width:1025px) and (max-width:1440px){
+#nome{
+    font-size: 36px;
+}
+
+.mask-container{
+    width: 60%;
+ height: 100vh;
+}
+.mask-container img{
+    width: 30%;
+}
+iframe{
+    width: 400px;
+    height: 380px;
+}
+}
+/*Versione Tablet*/
+@media screen  and (max-width:1024px) {
+    #nome{
+        margin-top: 10%;
+        font-size: 34px;
+    }
+    .mask-container img{
+        width: 40%;
+    }
+    .front-end{
+        font-size: 20px;
+    }
+    .description{
+        margin-top: 4%;
+        font-size: 20px;
+    }
+  .fa-moon,.fa-sun{
+    font-size: 30px;
+  }
+  .mask-container{
+   height: 70vh;
+    border-top-right-radius: 30%;
+    border-top-left-radius: 30%;
+    background-color: transparent !important;
+    width: 90%;
+  }
+  .container-home{
+    height: 90vh;
+  }
+ .btn-cv{
+    width: 80%;
+ }
+.javaScript,.react,.html,.css,.bootstrap,.wordPress{
+    margin-left: 0%;
+    font-size: 16px;
+}
+.react{
+    margin-left: 45%;
+}
+.html{
+    margin-top: 0;
+}
+
+  /* Imposta le icone all'interno su tablet*/
+  .scroll-content {
+    animation: none;
+    display: flex;
+    flex-direction: row;
+    animation: scrollAnimationTablet 8s linear infinite;
+  }
+ 
+  /* Animazione di scorrimento Homepage su tablet*/
+  @keyframes scrollAnimationTablet {
+    0% {
+      transform: translateY(0); /* Inizia fuori dalla parte superiore */
+    }
+    100% {
+      transform: translateY(38vh); /* Finisce fuori dalla parte inferiore della pagina */
+    }
+  }
+  iframe{
+    width: 100%;
+    height: 300px;
+ }
+ .container-progetto-hover h4{
+    font-size: 16px;
+ }
+ .container-progetto-hover{
+    height: 130%;
+ }
+}
+/*Versione Tablet interruzzione animazione*/
+@media screen and (max-width:820px){ 
+    .image{
+        display: none;
+    }  
+}
+
+/*Versione Smartphone*/
+@media screen and (max-width:767px){
+    .mask-container{
+        height: 100%;
+        border-radius: 10%;
+         width: 90%;
+       }
+    #nome{
+        font-size: 38px;
+    }
+    .container-home{
+        margin-bottom: 100px;
+    }
+    .description{
+       margin-left: auto;
+       margin-right: auto;
+        padding: 2% 5%;
+        width: 90%;
+        font-size: 16px;
+    }
+   
+    .scroll-content{
+        position: fixed;
+        display: flex;
+        animation: none;
+        width: max-content;
+        justify-content: space-evenly;
+        bottom: 0;
+        background-color: #000918;
+        animation: scrollPhone 8s linear infinite; 
+        gap: 10px;
+        z-index: 5;
+    }
+    body.light-mode .scroll-content{
+        background-color: white ;
+    }
+    .icon-container{
+        transition: transform 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    }
+    /*Animazione Home su telefono*/
+    @keyframes scrollPhone {
+        0% {
+            transform: translateX(80%); 
+        }
+        100% {
+            transform: translateX(-115%); 
+        }
+    }
+    #scroll-content2{
+        animation-delay: 4s;
+    }
+    .react{
+        margin-left: 0;
+    }
+    .javaScript,.react,.html,.css,.bootstrap,.wordPress{
+        margin-left: 0%;
+        font-size: 14px;
+    }
+    .header-menu{
+        margin:0;
+        width: 85%;
+    }
+    .darkmode-lightmode{
+        right: 0px;
+        margin-top: 0;
+    }
+    .fa-moon, .fa-sun{
+        font-size: 16px;
+      } 
+      .front-end{
+        font-size: 16px;
+      }
+    .container-contattami{
+     padding:20px;
+     border-radius: 2%;
+    }
+    #descrizione-contatti{
+        font-size: 18px;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+     #contatti{
+        margin-top: 0;
+        margin-bottom: 15px;
+     } 
+     /*Progetti*/
+     .container-progetto{
+        width: 100%;  
+     }
+     
+     /*Header posizione fissa su cellulare*/
+     #header{
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 100;
+        background-color:  #000918;
+     } body{
+        margin-top: 55px;
+     }
+     body.light-mode #header{
+        background-color:white;
+     }
+ 
+}
